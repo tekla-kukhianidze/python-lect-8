@@ -3,27 +3,24 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Django
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+
+# Django stuff
 *.log
 *.pot
 *.pyc
-*.pyo
-*.pyd
 *.sqlite3
 db.sqlite3
 media/
 staticfiles/
 
-local_settings.py
-
-# Virtual environments
-venv/
-env/
-ENV/
-.venv/
-.env/
-env.bak/
-venv.bak/
+# If you are using Django collectstatic
+/static/
+/media/
 
 # VS Code
 .vscode/
@@ -31,30 +28,34 @@ venv.bak/
 # PyCharm
 .idea/
 
-# macOS / Windows system files
+# macOS
 .DS_Store
+
+# Windows
 Thumbs.db
 
-# Migrations (optional — comment out if you want them tracked)
-# **/migrations/
-# !**/migrations/__init__.py
+# Migrations (optional, keep if you want to version control them)
+/**/migrations/*.py
+!/**/migrations/__init__.py
 
-# Environment variables / secrets
-*.env
-.env.*
-
-# Coverage / testing
+# Coverage and testing
 .coverage
+coverage.xml
 htmlcov/
 .tox/
-nosetests.xml
-coverage.xml
-*.cover
-.cache
+.junit/
+
+# Environment variables
+.env
+*.env
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pytest
 .pytest_cache/
 
-# Build artifacts
-build/
-dist/
-*.egg-info/
-*.egg
+# Local configs
+*.local
